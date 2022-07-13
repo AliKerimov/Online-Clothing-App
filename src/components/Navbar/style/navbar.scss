@@ -1,0 +1,34 @@
+.navbar{
+    @include flex(space-between,center,row);
+    height: 12vh;
+    >div{
+        width: 30%;
+    }
+    >:nth-child(2){
+        @include flex(center,center,row);
+    }
+    .categories{
+        @include flex(flex-start,center,row);
+        gap: 5%;
+        p{
+            padding: 10px 0px;
+            cursor: pointer;
+        }
+        :hover{
+            border-bottom: 1px solid $green-color;
+            color: $green-color;
+        }
+        .focused-categories{
+            border-bottom: 1px solid $green-color;
+            color: $green-color;
+        }
+    }
+    .currencies{
+        @include flex(flex-end,center,row);
+        gap: 5%;
+        div{
+            @include flex(center,center,row);
+            gap: 6px;
+        }
+    }
+}

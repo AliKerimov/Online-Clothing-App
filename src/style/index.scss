@@ -1,0 +1,8 @@
+@import './reset.scss';
+@import '../style/variables.scss';
+@import '../style/mixin.scss';
+@import '../components/Category/style/category.scss';
+@import '../components/Navbar/style/navbar.scss';
+.App{
+    margin: 0% 6%;
+}
