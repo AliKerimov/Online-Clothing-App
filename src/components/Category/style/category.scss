@@ -1,0 +1,21 @@
+.cards{
+    display: grid;
+    // grid-template-columns: repeat(3,1fr);
+    // @include flex(space-between,center,row);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8%;
+    // flex-wrap: wrap;
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+}
+.card{
+    margin-bottom: 15px;
+    // width: 31%;
+    img{
+        width: 96%;
+        @include flex(center,center,column);
+    }
+}

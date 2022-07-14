@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 
 function Navbar() {
-    const [color,setColor]=useState(false);
-    function colorHandler(){
-
-    }
+  const values = [
+    { id: 1, text: "MEN" },
+    { id: 2, text: "WOMEN" },
+    { id: 3, text: "KIDS" },
+  ];
+  const [activeId, setActiveId] = useState();
   return (
     <div className="navbar">
       <div className="categories">
-        <p onClick={colorHandler}>WOMEN</p>
-        <p onClick={colorHandler}>MEN</p>
-        <p onClick={colorHandler}>KIDS</p>
+      {values.map((val,ind) => (
+          <p key={ind} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "focused-categories" : ""}>{val.text}</p>
+        ))}
       </div>
       <div>
         <svg
@@ -20,7 +22,7 @@ function Navbar() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_150_358)">
+          <g clipPath="url(#clip0_150_358)">
             <path
               d="M34.0222 28.6646C34.0494 28.983 33.8009 29.2566 33.4846 29.2566H7.46924C7.15373 29.2566 6.90553 28.9843 6.93156 28.6665L8.7959 5.91227C8.8191 5.62962 9.05287 5.41211 9.33372 5.41211H31.5426C31.8226 5.41211 32.0561 5.62853 32.0801 5.91036L34.0222 28.6646Z"
               fill="#1DCF65"
@@ -47,8 +49,8 @@ function Navbar() {
               y2="9.9008"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#52D67A" />
-              <stop offset="1" stop-color="#5AEE87" />
+              <stop stopColor="#52D67A" />
+              <stop offset="1" stopColor="#5AEE87" />
             </linearGradient>
             <clipPath id="clip0_150_358">
               <rect
@@ -85,8 +87,8 @@ function Navbar() {
             <path
               d="M1 0.5L4 3.5L7 0.5"
               stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>

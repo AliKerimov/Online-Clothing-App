@@ -3,6 +3,11 @@
 @import '../style/mixin.scss';
 @import '../components/Category/style/category.scss';
 @import '../components/Navbar/style/navbar.scss';
+@import '../components/pdp/style/pdp.scss';
 .App{
-    margin: 0% 6%;
+    margin: 0% 7%;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

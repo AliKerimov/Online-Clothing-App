@@ -9,6 +9,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.cards {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8%;
+}
+.cards * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+.card img {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,11 +58,7 @@ code {
   padding: 10px 0px;
   cursor: pointer;
 }
-.navbar .categories :hover {
-  border-bottom: 1px solid #5ECE7B;
-  color: #5ECE7B;
-}
-.navbar .categories :focus-within {
+.navbar .categories .focused-categories {
   border-bottom: 1px solid #5ECE7B;
   color: #5ECE7B;
 }
@@ -59,6 +77,45 @@ code {
   gap: 6px;
 }
 
+.pdp {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-top: 50px;
+}
+
+.pdp-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.pdp-galery {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  width: 15%;
+  max-height: 350px;
+}
+.pdp-galery img {
+  width: 70%;
+}
+
+.pdpmain-img {
+  width: 75%;
+}
+.pdpmain-img img {
+  width: 80%;
+}
+
 .App {
-  margin: 0% 6%;
+  margin: 0% 7%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

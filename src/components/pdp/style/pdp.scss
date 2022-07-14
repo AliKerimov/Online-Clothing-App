@@ -1,0 +1,24 @@
+.pdp {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-top: 50px;
+}
+.pdp-img {
+  @include flex(flex-start, flex-start, row);
+  gap: 5%;
+}
+.pdp-galery {
+  @include flex(space-evenly, flex-start, column);
+  gap: 15px;
+  width: 15%;
+  max-height: 350px;
+  img {
+    width: 70%;
+  }
+}
+.pdpmain-img {
+  width: 75%;
+  img {
+    width: 80%;
+  }
+}
